@@ -2,23 +2,53 @@
 e-Presensi adalah aplikasi berbasis web yang dikembangkan untuk mempermudah proses presensi digital di lingkungan sekolah atau instansi.
 Aplikasi ini memanfaatkan Google Authentication untuk login dan Google Sheets API sebagai basis penyimpanan data, sehingga semua data absensi langsung tersimpan di Google Drive pengguna.
 
-🌐 Demo Online:
-👉 (https://smkyappiwns.github.io/presensi-siswa/)
 
-🚀 Fitur Utama
-🔐 Login dengan Akun Google — menggunakan integrasi Google OAuth2.0
-📋 Template Presensi Otomatis — sistem otomatis membuat file presensi-app di Google Sheets
-📤 Upload Template Presensi — bisa mengimpor file .xlsx atau .csv untuk memperbarui data
-🧾 Rekap Otomatis — data presensi langsung disimpan dan direkap di Google Sheet pengguna
-🌙 Mode Gelap & Terang — tampilan dinamis sesuai preferensi pengguna
-📱 Responsif — bisa digunakan di komputer, tablet, maupun smartphone
-🧠 Teknologi yang Digunakan
-Teknologi	Keterangan
-React 19	Framework utama UI
-Vite	Build tool cepat dan ringan
-Tailwind CSS	Styling modern dan responsif
-Google API Client (gapi-script)	Autentikasi & komunikasi dengan Google Sheet
-xlsx.js	Mengolah dan membaca file Excel
-Framer Motion	Animasi transisi UI
-Lucide React	Koleksi ikon SVG ringan
-React Router DOM	Navigasi antar halaman
+
+# 📌 e-Presensi Lite  
+Aplikasi Presensi Siswa berbasis Google Login & Google Spreadsheet
+
+✅ Login menggunakan Google OAuth (tanpa database lokal)  
+✅ Data tersimpan otomatis ke Google Spreadsheet  
+✅ Satu akun = satu file spreadsheet cloud  
+✅ UI simple & mobile friendly (React + Tailwind)  
+✅ Tidak perlu server backend (murni frontend + Google API)
+---
+
+# 🌐 Demo Online:
+## 👉 (https://smkyappiwns.github.io/presensi-siswa/)
+---
+
+## 🚀 Fitur Utama
+
+| Fitur | Keterangan |
+|-------|------------|
+| 🔐 Google Login | Menggunakan Google Identity Services (GIS) |
+| 📄 Auto Spreadsheet | Spreadsheet otomatis dibuat di Google Drive pengguna |
+| 🕒 Presensi Harian | Input hadir / izin / sakit / alfa |
+| 📊 Rekap Otomatis | Data otomatis dihitung dalam Spreadsheet |
+| 🏫 Pilihan Kelas | Guru dapat memilih kelas sebelum presensi |
+| 💾 Auto Save | Tidak ada tombol submit, data langsung tersimpan |
+| 📱 Full Responsive | Bisa dipakai lewat HP |
+| 🔁 Sync | Jika file sudah ada, tidak dibuat ulang |
+| ⚠️ Token Expired Auto Logout | Jika sesi habis, login ulang otomatis |
+
+---
+
+## 🛠️ Tech Stack
+
+| Teknologi | Digunakan Untuk |
+|-----------|-----------------|
+| React + Vite | Frontend utama |
+| TypeScript | Type safety |
+| TailwindCSS | UI styling |
+| Google Identity Services | Login OAuth |
+| Google Drive API | Membuat file spreadsheet |
+| Google Sheets API | Input & update presensi |
+| LocalStorage | Cache user & spreadsheet ID |
+| Service Worker (optional) | PWA / mode offline |
+
+---
+
+## 📂 Struktur Proyek (Ringkas)
+
+
